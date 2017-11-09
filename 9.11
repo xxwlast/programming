@@ -1,0 +1,39 @@
+#nums = [1, 2, 3]
+#for n in range (5):
+  #  print(n)
+ #print(nums)
+
+#text = "most recent call last"
+#words = text.split()
+#print(words)
+#print(words[1])
+#print(words[0:2])
+#for w in words[::2]:
+    #print(w)
+
+#nums = [[1, 2, 3]]*3
+#print(nums)
+#for row in nums:
+#    print(row)
+
+#w = "Hello world"
+#letters = []
+#for j in w:
+#    letters.append(j)
+#print(letters)
+
+#nums = [1, 2, 3]
+#nums_str = ""
+#for d in nums:
+#    nums_str = nums_str + str(d) + " "
+#print(nums_str)
+
+#letters = list("hello")
+#print(letters.count('l'))
+
+#nums = [2,3,14,1,1,0]
+#print(sorted(nums))
+
+#nums = [[1,2,3,4]]*5
+#print(nums)
+
