@@ -1,0 +1,40 @@
+#fname = "C:\\Users\\student\\Desktop\\heh.txt"
+#print(fname)
+#with open(fname) as f:
+    #если мы хотим уточнить кодировку текста,
+    #ее надо  написать там, где "(fname)" как encoding="кодировка"
+ #   text = f.read()
+#print(text[:100])
+#lines = text.split('\n')
+#print(lines[:5])
+
+#Выводит первые 100 символов и первые 5 строчек
+
+#for line in lines:
+  #  words = line.split()
+ #   for word in words:
+#        print(word)
+#    print()
+
+#Выводит все слова в столбец
+
+#text_el = []
+#for line in lines:
+#    words = line.split()
+#    text_el.append(words)
+#    for word in words:
+#        print(word)
+#    print()
+
+#Выводит все слова в столбец + делит их построчно
+
+fname = "C:\\Users\\student\\Desktop\\heh.txt"
+print(fname)
+with open(fname) as f:
+    lines = f.readlines()
+print(lines)
+
+
+#"hello",isupper()
+#выводит false  тк маленькие буквы, тру когда большие
+#Аналогичное говно происходит с  ,islower()
