@@ -1,0 +1,66 @@
+#filename = "text.txt"
+#with open (filename,"w") as f:
+#    f.write("hello\nworld\nfind me")
+
+# Пишет в файл "hello world"
+# \n - перенос строки 
+
+#sent = "доброе утро, страна"
+#words = sent.split()
+#lines = []
+#for w in words:
+#    lines.append(w + "\n")
+#with open("text.txt","w") as f:
+#        f.writelines(lines)
+
+# Пишет доброе утро страна и
+# каждое слово переносит на новую строчку
+
+
+#filename = "text.txt"
+#with open (filename,"w") as f:
+#    sent = "Доброе утро, страна, как дела?\n что делаешь, страна? А, ясно"
+#    words = sent.split()
+#lines = []
+#for i in range(len(words)):
+#    if i % 2 != 0:
+#        lines.append(words[i].upper() + "\n")
+#    else:
+#        lines.append(words[i] + "\n")
+
+filename = "text.txt"
+with open (filename,"w") as f:
+    sent = "Доброе утро, страна"
+    words = sent.split()
+    lines = []
+for i,w in enumerate(words):
+    if i % == 1 :
+        f.write(str[i] + " " + w.upper() "\n")
+    else:
+        
+print(i,w)
+
+
+#Там, где filename, "w"  запишем "а" и тогда в файле будет записываться всё
+#А при "w" всё стирается 
+
+
+
+
+
+#filename = "text.txt"
+#with open (filename,"a") as f:
+#    f.write("hello\nworld\nfind me")
+
+# Пишет в файл "hello world"
+# \n - перенос строки 
+
+#sent = "доброе утро, страна"
+#words = sent.split()
+#lines = []
+#for w in words:
+#    lines.append(w + "\n")
+#with open("text.txt","a") as f:
+#        f.writelines(lines)
+
+
