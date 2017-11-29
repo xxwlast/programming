@@ -4,5 +4,5 @@ for i in range(n):
     l.append(int(input())) 
 f = open("file.txt","w") 
 for i in range(n):
-    f.write('X'*l[i]+"\n") 
+    f.write('X' * l[i] + "\n") 
 f.close()
