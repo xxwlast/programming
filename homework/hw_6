@@ -1,6 +1,24 @@
 import random
-def noun:
+
+def noun():
     with open("nouns.txt", encoding = "utf-8") as f:
         t = f.read()
-        nouns = t.split()
-    return random.choice(nouns)
+        nouns = t.split(",")
+        random_noun = random.choice(nouns)
+    return random_noun
+
+
+def verb():
+    with open("verbs.txt", encoding = "utf-8") as f:
+        t = f.read()
+        verbs = t.split(",")
+        random_verb = random.choice(verbs)
+    return random_verb
+
+def combination1(noun):
+    if noun == "tu":
+        print(random_noun + " " + random_verb + "s")
+    else:
+        print(random_noun + " " + random_verb)
+
+print(combination1(noun))
