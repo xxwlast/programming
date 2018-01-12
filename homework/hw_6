@@ -1,0 +1,6 @@
+import random
+def noun:
+    with open("nouns.txt", encoding = "utf-8") as f:
+        t = f.read()
+        nouns = t.split()
+    return random.choice(nouns)
