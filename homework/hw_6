@@ -2,16 +2,28 @@
 import random
 
 def noun():
-    with open("nouns.txt", encoding = "utf-8") as n, open("verbs.txt", encoding = "utf-8") as v:
+    with open("nouns.txt", encoding = "utf-8") as n:
         t = n.read()
         nouns = t.split(",")
         random_noun = random.choice(nouns)
-        t_1 = v.read()
-        verbs = t_1.split(",")
+    return random_noun
+def verb(noun):
+    with open("verbs.txt", encoding = "utf-8") as v:
+        t = v.read()
+        verbs = t.split(",")
         random_verb = random.choice(verbs)
-    if random_noun == "tu":
-        return random_noun + random_verb + "s"
-    else:
-        return random_noun + random_verb
+    return random_verb
 
-print(noun())
+def noun_verb():
+    n_in_nv = noun()
+    v_in_nv = verb(n_in_nv)
+    if n_in_nv == "vous":
+        return n_in_nv + v_in_nv + "ez"
+    elif n_in_nv == "tu":
+        return n_in_nv + v_in_nv + "es"
+    elif n_in_nv == "les enfants":
+        return n_in_nv + v_in_nv + "ent"
+    else:
+        return n_in_nv + v_in_nv + "e"
+
+print(noun_verb())
