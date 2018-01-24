@@ -1,0 +1,73 @@
+import random
+
+def noun():
+    with open("nouns.txt", encoding = "utf-8") as n:
+        t = n.read()
+        nouns = t.split(",")
+        random_noun = random.choice(nouns)
+    return random_noun
+
+def verb(noun):
+    with open("verbs.txt", encoding = "utf-8") as v:
+        t = v.read()
+        verbs = t.split(",")
+        random_verb = random.choice(verbs)
+    return random_verb
+
+def adj():
+    with open("adj.txt", encoding = "utf-8") as a:
+        t = a.read()
+        adjectives = t.split(",")
+        random_adj = random.choice(adjectives)
+    return random_adj
+
+def words_for_option4():
+    with open("for_opt4.txt", encoding = "utf-8") as f:
+        t = f.read()
+        words = t.split(",")
+        random_word = random.choice(words)
+    return random_word
+
+def verb1():
+    n_sent = noun()
+    v_sent = verb(n_sent)
+    a_sent = adj()
+    if n_sent == "vous":
+        return v_sent + "ez" 
+    elif n_sent == "tu":
+        return  v_sent + "es" 
+    elif n_sent == "les enfants":
+        return  v_sent + "ent"  
+    else:
+        return v_sent + "e" 
+
+def option1():
+    verb = verb1()
+    n_sent = noun()
+    a_sent = adj()
+    return n_sent + verb + a_sent
+
+def option2():
+    verb = verb1()
+    n_sent = noun()
+    a_sent = adj()
+    return n_sent + " " + "ne" + verb + " " "pas" + a_sent
+
+def option3():
+    verb = verb1()
+    n_sent = noun()
+    a_sent = adj()
+    return n_sent + verb + a_sent + "?"
+
+def option4():
+    verb = verb1()
+    n_sent = noun()
+    a_sent = adj()
+    word = words_for_option4()
+    
+    return "si" + n_sent + verb + a_sent + "," + word
+
+def option5():
+
+    
+print(option5())
