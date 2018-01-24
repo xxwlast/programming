@@ -68,6 +68,24 @@ def option4():
     return "si" + n_sent + verb + a_sent + "," + word
 
 def option5():
+    verb = verb1()
+    n_sent = noun()
+    a_sent = adj()
 
-    
-print(option5())
+    return n_sent + ", " + verb + "!"
+
+def conclusion():
+    verse = random.choice([1,2,3,4,5])
+    if verse == 1:
+        return option1()
+    elif verse == 2:
+        return option2()
+    elif verse == 3:
+        return option3()
+    elif verse == 4:
+        return option4()
+    else:
+        return option5()
+
+for n in range(5):
+    print(conclusion())
