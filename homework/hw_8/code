@@ -26,17 +26,19 @@ def word(d):
                 print("Ура, это победа")
                 break
             else:
-                print
+                print(" ")
                 print(random.choice(d[word]))
                 r = r - 1
                 kus = input("Еще раз:")
                 if r > 0:
-                    print(" ")
                     print("У тебя осталось попыток до  лимита в 3 попытки:", r)
-                    
                 else:
-                    print(' ')
                     print("мяк")
+            if r == -2:
+                print(" ")
+                print("Эх")
+                print("загаданное слово:", word)
+
     
 
 def main():
@@ -44,4 +46,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
