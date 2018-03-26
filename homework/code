@@ -1,0 +1,7 @@
+import re
+
+with open("download.txt", encoding = "UTF-8") as f:
+    t = f.read().lower()
+downloads = re.findall("загру[зж][\w]{1,7}",t)
+mrrr = ", ".join(downloads)
+print(mrrr)
