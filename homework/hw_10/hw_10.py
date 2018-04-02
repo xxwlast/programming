@@ -1,7 +1,7 @@
 import re
 
 def first(e):
-    match = re.search('Отряд(.*?)>(.*?)<"', e, flags=re.DOTALL)
+    match = re.search(r'Отряд(.*?)>(.*?)<"', e, flags=re.DOTALL)
     if match:
         print(match.group(2))
     else:
@@ -14,7 +14,7 @@ def second(n):
     return t
 
 def main():
-    (second(first("s.html")))
+    (second(first(input("Введи название текста: (всё равно ничего нормального не выдаст)"))))
     
 if __name__ == "__main__":
     main()
