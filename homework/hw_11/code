@@ -3,7 +3,7 @@ import re
 
 def first():
     non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
-    with open("finland.html", encoding="UTF-8") as f:
+    with open("finland.txt", encoding="UTF-8") as f:
         t = f.read()
     result = re.sub(r"Финляндия","Малайзия", t.translate(non_bmp_map))
     return result
