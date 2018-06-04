@@ -1,0 +1,21 @@
+import re
+
+def opening(text):
+	with open(text, encoding="UTF-8") as f:
+		t = f.read()
+		m = re.split("\. | \? | \!", t )
+	return m
+
+def long(textt):
+	longtexts = [t for t in textt if len(t) > 8]
+	for lt in longtexts:
+		sentence = lt.split(" ")
+		x = len(lt) / len(sentence)
+		print("это предложение со словами длины {}".format(x))
+	return 1
+
+def main():
+	long(opening("sas.txt"))
+
+if __name__ == "__main__":
+	main()
