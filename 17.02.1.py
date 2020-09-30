@@ -1,3 +1,4 @@
+#this is one of the simplest way
 import re
 
 a = re.findall('a', 'abracadabra')
